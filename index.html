@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -55,8 +55,91 @@
           </div>
         </div>
           <div class="right-menu">
-            1
-          </div>
+            <div class="right-menu">
+              <div class="right-menu__section">
+                <h2 class="right-menu__title title-bold">Skills</h2>
+            
+                <div class="right-menu__content">
+                <div class="right-menu__content-margin">
+                  <div class="right-menu__subtitle title-bold">Main skills</div>
+                  <ul class="right-menu__list">
+                    <li class="right-menu__item">HTML5, CSS3</li>
+                    <li class="right-menu__item">JavaScript</li>
+                    <li class="right-menu__item">Vue.js</li>
+                    <li class="right-menu__item">Node.js</li>
+                    <li class="right-menu__item">Git, GitHub</li>
+                  </ul>
+              </div>
+              <div class="right-menu__content-margin">
+                  <div class="right-menu__subtitle title-bold">University experience</div>
+                  <ul class="right-menu__list">
+                    <li class="right-menu__item">PHP</li>
+                    <li class="right-menu__item">SQL</li>
+                    <li class="right-menu__item">Java</li>
+                    <li class="right-menu__item">Python</li>
+                    <li class="right-menu__item">C / C++</li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="right-menu__section">
+                <h3 class="right-menu__title title-bold">Code Examples</h3>
+          
+                <div class="right-menu__content content-column">
+                <span class="right-menu__text">
+                    This code is from my previous Block Blast project.
+                    The function checks if a selected shape can be placed on the game board.
+                </span>
+<pre class="cv__code"><code>
+const canPlaceShape = (
+    shape: Shape,
+    startRow: number,
+    startCol: number
+  ): boolean => {
+    for (let r = 0; r &lt; shape.length; r++) {
+      for (let c = 0; c &lt; shape[r].length; c++) {
+        if (shape[r][c] === 1) {
+          const boardRow = startRow + r;
+          const boardCol = startCol + c;
+          if (
+            boardRow &gt;= BOARD_SIZE ||
+            boardCol &gt;= BOARD_SIZE
+          ) {
+            return false;
+          }
+          if (!isCellEmpty(boardRow, boardCol)) {
+            return false;
+          }
+        }
+      }
+    }
+    return true;
+  };
+</code></pre>
+                </div>
+       
+          
+              <div class="right-menu__section">
+                <h3 class="right-menu__title title-bold">Education</h3>
+            
+                <div class="right-menu__content">
+                  <span class="right-menu__text">
+                    Izhevsk State Technical University. Faculty of Software Engineering.
+                     3rd year student
+                  </span>
+                </div>
+              </div>
+          
+              <div class="right-menu__section">
+                <h3 class="right-menu__title title-bold">Languages</h3>
+                <div class="right-menu__content content-column">
+                  <span class="right-menu__text-languages">Russian — Native</span>
+                  <span class="right-menu__text-languages">English — A1/A2</span>
+                </div>
+              </div>
+            </div>
+        </div>
     </main>
   </body>
 </html>
